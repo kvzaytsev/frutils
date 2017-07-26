@@ -1,0 +1,1 @@
+export const compose = (...args) => a => args.reduce((res, cur) => cur(res), a);
