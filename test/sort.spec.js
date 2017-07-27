@@ -8,7 +8,7 @@ describe('Array sorting by means of', () => {
   let inputArray, expectedArray;
 
   before(() => {
-    inputArray = [4, 1, 6, 2, 7, 0, 9, 3];
+    inputArray = [4, 1, 6, 2, 7, 0, 9, 3, 5];
     expectedArray = [].concat(inputArray).sort();
   });
 
@@ -24,6 +24,22 @@ describe('Array sorting by means of', () => {
 
     it('should sort the same way as native .sort()', () => {
       expect(sorts.insert(inputArray)).to.deep.equal(expectedArray);
+    });
+
+  });
+
+  describe('Bubble sort', () => {
+
+    it('should sort the same way as native .sort()', () => {
+      expect(sorts.bubble(inputArray)).to.deep.equal(expectedArray);
+    });
+
+  });
+
+  describe('Merge sort', () => {
+
+    it('should sort the same way as native .sort()', () => {
+      expect(sorts.merge(inputArray)).to.deep.equal(expectedArray);
     });
 
   });
